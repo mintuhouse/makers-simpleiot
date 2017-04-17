@@ -338,7 +338,7 @@ DEPENDENCIES
   administrate
   annotate
   better_errors
-  bootstrap (~> 4.0.0.alpha3.1)
+  bootstrap (~> 4.0.0.alpha6)
   bourbon
   byebug
   capybara
