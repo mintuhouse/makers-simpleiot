@@ -1,1 +1,14 @@
 <h3>Welcome</h3>
+
+Usage:
+<ul>
+  <li> <%= link_to "Create an account", new_user_registration_path %>
+  <li> Login and <%= link_to "add your device", devices_path %>
+  <li> You can now get or update the data for device via API
+    <br/><br/>
+    Get Data: (GET request)<br />
+    <%= api_get_data_url(secret: "secret") %>
+    <br/><br/>
+    Set Data: (POST request) <br />
+    <%= api_set_data_url(secret: "secret", value: "new_value") %>
+</ul>

@@ -1,6 +1,8 @@
 # == Route Map
 #
 #                   Prefix Verb   URI Pattern                        Controller#Action
+#             api_get_data GET    /api/get_data(.:format)            api#get_data
+#             api_set_data POST   /api/set_data(.:format)            api#set_data
 #                  devices GET    /devices(.:format)                 devices#index
 #                          POST   /devices(.:format)                 devices#create
 #               new_device GET    /devices/new(.:format)             devices#new
@@ -54,6 +56,9 @@
 #
 
 Rails.application.routes.draw do
+  get 'api/get_data'
+  post 'api/set_data'
+
   resources :devices
   namespace :admin do
     resources :users
@@ -62,6 +67,6 @@ Rails.application.routes.draw do
   end
 
   root to: 'visitors#index'
-  devise_for :users  
+  devise_for :users
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 end

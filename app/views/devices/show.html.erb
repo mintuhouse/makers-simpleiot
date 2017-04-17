@@ -13,6 +13,20 @@
     <th>Data</th>
     <td><%= @device.data %></td>
   </tr>
+  <tr>
+    <th>Get Data Url</th>
+    <td>
+      <% geturl = api_get_data_url(secret: @device.secret) %>
+      <%= link_to geturl, geturl, target: "_blank" %>
+    </td>
+  </tr>
+  <tr>
+    <th>Set Data Url</th>
+    <td>
+      <%= seturl = api_set_data_url(secret: @device.secret, value: "new value") %>
+      <br />(You need to send a POST request)
+    </td>
+  </tr>
 </table>
 
 <%= link_to 'Edit', edit_device_path(@device) %> |
