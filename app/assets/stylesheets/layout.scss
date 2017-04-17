@@ -1,4 +1,8 @@
 main {
-  min-height: 400px;
+  min-height: calc(100vh - 150px);
   padding: 20px;
+}
+
+footer {
+  height: 50px;
 }
