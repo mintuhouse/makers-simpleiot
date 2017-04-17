@@ -31,7 +31,6 @@ gem 'pg'
 gem 'pundit'
 group :development do
   gem 'better_errors'
-  gem 'foreman'
   gem 'guard-bundler'
   gem 'guard-rails'
   gem 'guard-rspec'
