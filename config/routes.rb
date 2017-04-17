@@ -1,6 +1,14 @@
 # == Route Map
 #
 #                   Prefix Verb   URI Pattern                        Controller#Action
+#                  devices GET    /devices(.:format)                 devices#index
+#                          POST   /devices(.:format)                 devices#create
+#               new_device GET    /devices/new(.:format)             devices#new
+#              edit_device GET    /devices/:id/edit(.:format)        devices#edit
+#                   device GET    /devices/:id(.:format)             devices#show
+#                          PATCH  /devices/:id(.:format)             devices#update
+#                          PUT    /devices/:id(.:format)             devices#update
+#                          DELETE /devices/:id(.:format)             devices#destroy
 #              admin_users GET    /admin/users(.:format)             admin/users#index
 #                          POST   /admin/users(.:format)             admin/users#create
 #           new_admin_user GET    /admin/users/new(.:format)         admin/users#new
@@ -46,6 +54,7 @@
 #
 
 Rails.application.routes.draw do
+  resources :devices
   namespace :admin do
     resources :users
 

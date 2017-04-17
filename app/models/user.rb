@@ -43,4 +43,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :invitable, :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  has_many :user_devices
+  has_many :devices, through: :user_devices
+
+  accepts_nested_attributes_for :user_devices
 end

@@ -1,1 +1,4 @@
 <%# add navigation links to this file %>
+<% if user_signed_in? %>
+<li class='nav-item'><%= link_to 'My Devices', devices_path, class: 'nav-link' %></li>
+<% end %>

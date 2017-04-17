@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<table class="table table-responsive">
+  <tr>
+    <th>Name</th>
+    <td><%= @device.name %></td>
+  </tr>
+  <tr>
+    <th>Secret</th>
+    <td><%= @device.secret %></td>
+  </tr>
+  <tr>
+    <th>Data</th>
+    <td><%= @device.data %></td>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>
