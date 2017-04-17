@@ -81,5 +81,4 @@ test:
 production:
   <<: *default
   database: makers-simpleiot_production
-  username: makers-simpleiot
-  password: <%= ENV['MAKERS-SIMPLEIOT_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
