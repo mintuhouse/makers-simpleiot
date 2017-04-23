@@ -4,12 +4,12 @@ class ApiController < ApplicationController
   before_action :set_device
 
   def get_data
-    render json: {data: @device.data}
+    render json: @device.data
   end
 
   def set_data
     @device.update!(data: params[:value])
-    render json: {data: @device.data}
+    render json: @device.data
   end
 
   private
